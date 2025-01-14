@@ -6,3 +6,18 @@ body {
   font-family: 'Markazi Text', 'Times New Roman', Times, serif;
   font-size: 16pt;
 }
+
+.page-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 26pt;
+  font-weight: 700;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40%;
+  padding-right: 40%;
+  text-align: center;
+}
+
+.blog-body {
+  padding: 20px;
+}
