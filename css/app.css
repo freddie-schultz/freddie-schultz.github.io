@@ -35,6 +35,7 @@ body {
 .navigation-buttons-container {
   display: inline-block;
   flex: 1;
+  display: flex;
 }
 
 .navigation-button {
@@ -43,7 +44,8 @@ body {
   padding: 20px;
   margin: 20px;
   display: inline-block;
-  width: 20%;
+  text-align: center;
+  flex: 1;
 }
 
 .profile-picture-container {
