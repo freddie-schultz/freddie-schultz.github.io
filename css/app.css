@@ -1,3 +1,4 @@
+/* Temporary class for viewing outlines of elements */
 .black-border {
   border: 5px solid black;
 }
@@ -25,9 +26,15 @@ body {
 }
 
 .navigation-bar {
-  padding: 20px;
-  margin: 20px;
   border: 3px solid rgb(6, 148, 30);
+  width: auto;
+  height: auto;
+  display: flex;
+}
+
+.navigation-buttons-container {
+  display: inline-block;
+  flex: 1;
 }
 
 .navigation-button {
@@ -36,6 +43,12 @@ body {
   padding: 20px;
   margin: 20px;
   display: inline-block;
+  width: 20%;
+}
+
+.profile-picture-container {
+  height: 100px;
+  width: 100px;
 }
 
 .profile-picture {
