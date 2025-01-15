@@ -7,6 +7,12 @@ body {
   background: #b7ecaa;
 }
 
+h1 {
+  margin: 0px;
+  font-size: 26pt;
+  font-weight: 700;
+}
+
 .markazi-text {
   font-family: 'Markazi Text', 'Times New Roman', Times, serif;
   font-size: 16pt;
@@ -14,8 +20,6 @@ body {
 
 .page-title {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 26pt;
-  font-weight: 700;
   padding: 20px;
   margin: 20px 200px 20px 200px;
   text-align: center;
