@@ -5,6 +5,7 @@
 
 body {
   background: #b7ecaa;
+  margin: 0px;
 }
 
 .markazi-text {
@@ -36,7 +37,7 @@ h2 {
 
 .blog-body {
   padding: 0px 20px 0px 20px;
-  margin: 20px;
+  margin: 20px 20px 50px 20px;
   border: 1px solid green;
 }
 
@@ -92,4 +93,27 @@ This is wrapped in an <a> which is inside a navigation-button-container */
   border-radius: 50%;
   height: 100%;
   width: 100%;
+}
+
+.page-footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 5px 0px 5px 0px;
+  margin-left: 0px;
+  background-color: rgb(66, 214, 66);
+  border-top: 1px solid green;
+}
+
+.footer-text {
+  display: inline-block;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.footer-secret-text {
+  display: inline-block;
+  color: rgb(66, 214, 66);
 }
