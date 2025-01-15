@@ -7,15 +7,22 @@ body {
   background: #b7ecaa;
 }
 
+.markazi-text {
+  font-family: 'Markazi Text', 'Times New Roman', Times, serif;
+  font-size: 16pt;
+}
+
 h1 {
   margin: 0px;
   font-size: 26pt;
   font-weight: 700;
 }
 
-.markazi-text {
-  font-family: 'Markazi Text', 'Times New Roman', Times, serif;
-  font-size: 16pt;
+h2 {
+  margin: 10px;
+  font-size: 20pt;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .page-title {
@@ -49,13 +56,15 @@ h1 {
   width: 100px;
 }
 
-/* Contains all navigation buttons in nav menu */
+/* Contains all navigation buttons in nav menu 
+Not to be confused with navigation-button-container */
 .navigation-buttons-container {
   flex: 1;
   display: flex;
 }
 
-/* Contains a single navigation button div wrapped in an <a> */
+/* Contains a single navigation button div wrapped in an <a>
+Not to be confused with navigation-buttons-container */
 .navigation-button-container {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20pt;
@@ -69,7 +78,8 @@ h1 {
   background-color: #b7ecaa;
 }
 
-/* A single navigation button div. This is wrapped in an <a> which is inside a navigation-button-container */
+/* A single navigation button div.
+This is wrapped in an <a> which is inside a navigation-button-container */
 .navigation-button {
   height: 100%;
   display: flex;
