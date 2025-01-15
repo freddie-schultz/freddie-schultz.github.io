@@ -1,0 +1,73 @@
+/* Temporary class for viewing outlines of elements */
+.black-border {
+  border: 5px solid black;
+}
+
+body {
+  background: #b7ecaa;
+}
+
+.markazi-text {
+  font-family: 'Markazi Text', 'Times New Roman', Times, serif;
+  font-size: 16pt;
+}
+
+.page-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 26pt;
+  font-weight: 700;
+  padding: 20px;
+  margin: 20px 200px 20px 200px;
+  text-align: center;
+  border: 3px solid green;
+  border-radius: 20px;
+}
+
+.blog-body {
+  padding: 0px 20px 0px 20px;
+  margin: 20px;
+  border: 1px solid green;
+}
+
+.navigation-bar {
+  border: 5px solid green;
+  border-radius: 10px;
+  width: auto;
+  height: 110px;
+  display: flex;
+  margin: 20px;
+  padding: 10px;
+  background-color: #a2dd93;
+}
+
+.profile-picture-container {
+  height: 100px;
+  width: 100px;
+}
+
+.navigation-button-container {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20pt;
+  font-weight: bold;
+  padding: 0px;
+  margin: 20px;
+  text-align: center;
+  flex: 1;
+  border: 5px solid green;
+  border-radius: 10px;
+  background-color: #b7ecaa;
+}
+
+.navigation-button {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-picture {
+  border: 5px solid green;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
