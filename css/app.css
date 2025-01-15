@@ -17,7 +17,7 @@ body {
   font-size: 26pt;
   font-weight: 700;
   padding: 20px;
-  margin: 20px;
+  margin: 20px 200px 20px 200px;
   text-align: center;
 }
 
@@ -28,8 +28,10 @@ body {
 .navigation-bar {
   border: 3px solid rgb(6, 148, 30);
   width: auto;
-  height: auto;
+  height: 100px;
   display: flex;
+  margin: 20px;
+  padding: 10px;
 }
 
 .profile-picture-container {
@@ -37,7 +39,6 @@ body {
   width: 100px;
 }
 .navigation-buttons-container {
-  display: inline-block;
   flex: 1;
   display: flex;
 }
@@ -46,7 +47,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20pt;
   font-weight: bold;
-  padding: 20px;
+  padding: 10px;
   margin: 20px;
   display: inline-block;
   text-align: center;
