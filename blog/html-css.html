@@ -50,15 +50,20 @@
 
         <p>
           <strong>block</strong> elements are always displayed on a new line
-          from the previous element and contain a margin on the top and bottom.
-          They will also take up the full available width of the parent element.
-          Some common default block elements are &lt;p&gt;, &lt;div&gt;, and
-          &lt;h1&gt; to &lt;h6&gt;. Here's an example of some block elements and
-          the code used to create them:
+          from the previous element and will create a line-break afterwards.
+          They can also be given a set height and width, and by default will
+          take up the full available width of the parent element. Some common
+          default block elements are &lt;p&gt;, &lt;div&gt;, and &lt;h1&gt; to
+          &lt;h6&gt;. Here's an example of some block elements and the code used
+          to create them:
         </p>
 
-        <div>This is a block element (&lt;div&gt;)</div>
-        <p>This is another block element (&lt;p&gt;)</p>
+        <div style="border: 1px solid black">
+          This is a block element (&lt;div&gt;)
+        </div>
+        <p style="border: 1px solid black; height: 100px; width: 200px">
+          This is another block element (&lt;p&gt;) with a set height and width
+        </p>
         <img
           src="/img/block-elements-example.png"
           alt="Example code of block elements"
@@ -67,19 +72,62 @@
         <p style="margin-bottom: 40px; margin-top: 40px">
           <strong>inline</strong> elements are displayed on the same line as the
           element before them and will only take up as much space as the content
-          they contain. Some common default inline elements are &lt;span&gt;,
-          &lt;a&gt;, and &lt;code&gt;. Here's an example of some inline elements
-          and the code used to create them:
+          they contain. They cannot be given a set height or width (see example
+          below; the height and width styles do nothing). Some common default
+          inline elements are &lt;span&gt;, &lt;a&gt;, and &lt;code&gt;. Here's
+          an example of some inline elements and the code used to create them:
         </p>
-        <span>This is an inline element (&lt;span&gt;)</span>
-        <a href="#">This is another inline element (&lt;a&gt;)</a>
-        <p>
+        <span style="border: 1px solid black; height: 100px; width: 200px"
+          >This is an inline element (&lt;span&gt;)</span
+        >
+        <a href="#" style="border: 1px solid black; height: 100px; width: 200px"
+          >This is another inline element (&lt;a&gt;)</a
+        >
+        <p style="margin-bottom: 40px">
           <img
             src="/img/inline-elements-example.png"
             alt="Example code of inline elements"
           />
         </p>
-        <p style="margin-bottom: 40px"></p>
+
+        <p style="margin-bottom: 40px">
+          <strong>inline-block</strong> elements combine aspects of block and
+          inline together. They are like inline elements in that they will be
+          displayed on the same line as other inline elements and won't create a
+          line-break afterwards, but they are like block elements in that they
+          can be given a set height and width. If height and width are not
+          specified, they will only be as big as the content they contain (like
+          an inline element). This can be used to create an inline element with
+          a set height or width, or a block element that displays inline. Here's
+          an example of some inline-block elements and the code used to create
+          them:
+        </p>
+        <span
+          style="display: inline-block; border: 1px solid black; height: 50px"
+          >This is an inline-block element (&lt;span&gt;) with a set
+          height</span
+        >
+        <div style="display: inline-block; border: 1px solid black">
+          This is also an inline-block element (&lt;div&gt;) with no set height
+          or width
+        </div>
+        <div
+          style="
+            display: inline-block;
+            border: 1px solid black;
+            height: 100px;
+            width: 200px;
+          "
+        >
+          This is an inline-block element (&lt;div&gt;) with a set height and
+          width
+        </div>
+        <p style="margin-bottom: 40px">
+          <img
+            src="/img/inline-block-elements-example.png"
+            alt="Example code of inline-block elements"
+          />
+        </p>
       </div>
     </main>
     <footer>
