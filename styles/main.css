@@ -28,7 +28,7 @@ h2 {
 .page-title {
   font-family: Arial, Helvetica, sans-serif;
   padding: 20px;
-  margin: 20px 200px 20px 200px;
+  margin: 20px 15% 20px 15%;
   text-align: center;
   border: 3px solid green;
   border-radius: 20px;
@@ -132,12 +132,6 @@ This is wrapped in an <a> which is inside a navigation-button-container */
 
 @media (max-width: 1000px) {
   .page-title {
-    margin: 20px 100px 20px 100px;
-  }
-}
-
-@media (max-width: 700px) {
-  .page-title {
-    margin: 20px 50px 20px 50px;
+    margin: 20px 10% 20px 10%;
   }
 }
