@@ -1,6 +1,6 @@
 What is Emotional Intelligence?
 
-Emotional Intelligence is a general term to describe our understanding of our own emotions and how they affect ourselves and others. It includes the ability for us to recognize what emotions we are feeling without being directly affected by them, understandign the emotions of others, and using this information to guide our mental and physical habits and intentions.
+Emotional Intelligence is a general term to describe our understanding of our own emotions and how they affect ourselves and others. It includes the ability for us to recognize what emotions we are feeling without being directly affected by them, understanding the emotions of others, and using this information to guide our mental and physical habits and intentions.
 
 
 How is EQ different to IQ?
