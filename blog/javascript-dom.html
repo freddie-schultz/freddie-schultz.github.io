@@ -42,9 +42,11 @@
         <h3>JavaScript and how it relates to HTML/CSS</h3>
         <p style="margin-bottom: 40px">
           JavaScript provides (almost) all of the functionality of a website. If
-          HTML is the building materials and CSS is the paint/wallpaper, then
-          JavaScript is the builder putting it all together, and installing all
-          of the electrical wiring and plumbing.
+          a website is a house, HTML is the building materials and CSS is the
+          paint/wallpaper, then JavaScript is the builder putting it all
+          together, and installing all of the electrical wiring and plumbing.
+          This builder can break down and rebuild any part of the house whenever
+          they want.
         </p>
 
         <h3>Control Flow and Loops</h3>
@@ -70,8 +72,8 @@
         </pre>
         <p style="margin-bottom: 40px">
           This would first check that the bowl of cereal doesn't have enough
-          milk yet and if so, pour some milk. Then it will check again and if it
-          still doesn't have enough milk it will pour some more. It will keep
+          milk yet and, if so, pour some milk. Then it will check again and if
+          it still doesn't have enough milk it will pour some more. It will keep
           doing this until the bowl of cereal does have enough milk. If the bowl
           of cereal already has enough milk on the first check, it won't pour
           any milk.
@@ -84,15 +86,15 @@
           having one parent but potentially many children. The top level node is
           "window" which has the child "document", and from there it branches
           off into the rest of the DOM. The children of "document" include all
-          html tags, with any nested tags being the child of the tag they are
-          nested inside.
+          html elements, with any nested elements being the child of the element
+          they are nested inside.
         </p>
         <p>
           Interacting with the DOM can be done via JavaScript by accessing the
           "document" object. The document object contains a large number of
           properties and methods for interacting with all of the nodes in the
           DOM, including all HTML elements. It can be used to retrieve a node,
-          read and modify it's properties and contents, and add event listeners
+          read and modify its properties and contents, and add event listeners
           to it to allow user interactivity. Here's an example:
         </p>
         <pre><code>
@@ -101,6 +103,9 @@
 
   // Change the text on the button to say "Press Me!"
   element.textContent = "Press Me!"
+
+  // Assign an event listener to the element to run the function "myCoolFunction" when it is clicked
+  element.addEventListener('click', myCoolFunction)
        </code></pre>
         <p style="margin-bottom: 40px">
           The DOM can also be accessed via developer tools in a web browser,
