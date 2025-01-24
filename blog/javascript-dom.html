@@ -95,20 +95,97 @@
           read and modify it's properties and contents, and add event listeners
           to it to allow user interactivity. Here's an example:
         </p>
-        <pre>
-          <code>
-  //Retrieve the node with id="myButton" and assign it to a variable called element
+        <pre><code>
+  // Retrieve the node with id="myButton" and assign it to a variable called element
   let element = document.querySelector("#myButton")
 
-  //Change the text on the button to say "Press Me!"
+  // Change the text on the button to say "Press Me!"
   element.textContent = "Press Me!"
-  
-  
-          </code>
-        </pre>
-        <p>
+       </code></pre>
+        <p style="margin-bottom: 40px">
           The DOM can also be accessed via developer tools in a web browser,
           e.g. Chrome DevTools.
+        </p>
+        <h3>Arrays vs Objects</h3>
+        <p>
+          Arrays are a list of values that are stored sequentially and can all
+          be referenced by their "index", which is a number representing how far
+          down the list they are. Array indexes start counting from 0, not 1.
+          The index doesn't represent the position in the list, it represents
+          how many places you need to jump forward from the first value (index 0
+          means jump forward 0 places, leaving you still on the first value).
+          The values in an array can be anything, including other arrays or
+          objects. Arrays are denoted with square brackets [ ]. Here's an
+          example:
+        </p>
+        <pre><code>
+  // Declaring an array with 4 string values, the letters a, b, c, and d 
+  let myArray = ['a', 'b', 'c', 'd']
+  
+  // Accessing a value in the array using its index number
+  // This will output the array value with index 2, which is 'c'
+  // (counting starts at 0, we jump forward 2 places from the start)
+  console.log(myArray[2])
+        </code></pre>
+        <p>
+          Objects are similar to arrays, except instead of a sequential list of
+          values, they store values with a key/value pair. Every value in an
+          object has a key, which is like an ID name. To access a value in an
+          array you use the index number, but to access a value in an object you
+          use the key. The values in an object can be anything, including other
+          objects. Objects are denoted with braces (AKA squiggly brackets) { }.
+          To access the values in an object you can use .nameOfKey if you know
+          the name of the key, or [nameOfKey] to enter a variable equal to the
+          name of the key. Here's an example:
+        </p>
+        <pre><code>
+  // Declaring an object for a car with 5 string values, the people sitting in each seat
+  let carObject = {
+    driver: 'David',
+    frontPassenger: 'Sarah',
+    rearLeftPassenger: 'Jimmy',
+    rearMiddlePassenger: 'Luke',
+    rearRightPassenger: 'Colin',
+  }
+
+  // Accessing a value in the object using its key
+  // This will output the value assigned to the key "frontPassenger"
+  console.log(carObject.frontPassenger)
+
+  // Accessing a value in the objbect using a variable to represent the key name
+  // This will output the value assigned to the key "driver"
+  let carSeat = "driver"
+  console.log(carObject[carSeat])
+          
+                </code></pre>
+        <h3>Functions</h3>
+        <p>
+          Functions are a block of code that that will only execute when the
+          function is called by name. Functions can be passed one or more
+          arguments or can by run by themselves. They can also return a value or
+          just run the code alone.
+        </p>
+        <p>
+          Functions are useful because they allow a block of code to be run many
+          times at different points in the program without having to rewrite all
+          the code in the block. Here's an example:
+        </p>
+        <pre><code>
+  // Declare a function called greetPerson
+  function greetPerson(name, adjective){
+    alert('Hello ' + name + '! You are ' + adjective + '!')
+  }
+
+  // Call the function for our lovely friend Oliver
+  // This will display an alert saying "Hello Oliver! You are lovely!"
+  greetPerson('Oliver', "lovely")
+      </code></pre>
+        <p>
+          This function takes 2 arguments and allows us to easily create a
+          greeting pop-up for a person, by providing a name and an adjective to
+          describe that person. We can call this function as many times as we
+          want with different names and adjectives and don't have to keep
+          re-writing the alert() message.
         </p>
       </div>
     </main>
