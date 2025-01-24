@@ -62,9 +62,10 @@
           function for making a bowl of cereal:
         </p>
         <pre>
-          <code>while (bowlOfCereal != hasEnoughMilk){
-            pourSomeMoreMilk(bowlOfCereal)
-          }
+          <code>
+  while (bowlOfCereal != hasEnoughMilk){
+    pourSomeMoreMilk(bowlOfCereal)
+  }
           </code>
         </pre>
         <p style="margin-bottom: 40px">
@@ -88,11 +89,26 @@
         </p>
         <p>
           Interacting with the DOM can be done via JavaScript by accessing the
-          "document" object.
+          "document" object. The document object contains a large number of
+          properties and methods for interacting with all of the nodes in the
+          DOM, including all HTML elements. It can be used to retrieve a node,
+          read and modify it's properties and contents, and add event listeners
+          to it to allow user interactivity. Here's an example:
         </p>
+        <pre>
+          <code>
+  //Retrieve the node with id="myButton" and assign it to a variable called element
+  let element = document.querySelector("#myButton")
+
+  //Change the text on the button to say "Press Me!"
+  element.textContent = "Press Me!"
+  
+  
+          </code>
+        </pre>
         <p>
           The DOM can also be accessed via developer tools in a web browser,
-          e.g. Chrome DevTools
+          e.g. Chrome DevTools.
         </p>
       </div>
     </main>
