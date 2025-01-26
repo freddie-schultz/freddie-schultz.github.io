@@ -41,3 +41,8 @@ Link to a resource that you found particularly useful or engaging.
 
 https://www.themarginalian.org/2014/01/29/carol-dweck-mindset/
 https://www.ted.com/talks/carol_dweck_the_power_of_believing_that_you_can_improve#t-459099
+
+
+Reflect and discuss how these understandings may shape or influence your learning plan and strategy.
+
+I hope to influence my learning by adopting a growth mindset and reminding myself about neuroplasticity. It's a matter of practice and repetition so I need to keep doing it every day.
