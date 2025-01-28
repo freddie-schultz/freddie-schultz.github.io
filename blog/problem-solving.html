@@ -36,7 +36,157 @@
 
     <div class="page-title"><h1>Problem Solving</h1></div>
     <main>
-      <div class="blog-body markazi-text"></div>
+      <div class="blog-body markazi-text">
+        <h2>When I Was Blocked on a Simple Problem</h2>
+        <p>
+          During Sprint 4 we were doing JavaScript challenges called Kata. One
+          of the challenges was called "Gradebook" and it required us to add and
+          modify properties inside of a data object that represented a
+          gradebook. This object contained records of the students, and each
+          student had a record of all of their scores.
+        </p>
+        <p>
+          One of the tasks involved creating a function to add a new score to a
+          student's list of scores. This function would be given the student's
+          name and the score to add. While I was writing this function, I used
+          the wrong syntax for accessing the student properties in the gradebook
+          object. JavaScript objects have 2 ways of accessing their properties:
+          dot notation (Object.property) and bracket notation
+          (Object[property]). The difference between these is that dot notation
+          uses the exact name of the property you are accessing, and bracket
+          notation uses a variable that is equal to the name of the property you
+          are accessing. When I first wrote the function for this challenge I
+          used dot notation to access a student's record but I was using a
+          variable that represented the student's name:
+        </p>
+        <p>I used:</p>
+        <p>gradebook.studentName.testScores</p>
+        <p>instead of:</p>
+        <p>gradebook[studentName].testScores</p>
+        <p>
+          This meant that I was trying to access a record with the student name
+          "studentName" instead of a record with the student name that equalled
+          the value of the studentName variable.
+        </p>
+        <p>
+          To problem solve this I looked at the error message given by the
+          built-in tests: TypeError: Cannot read properties of undefined
+          (reading 'testScores'). This let me know there was something wrong
+          with gradebook.studentName, as it was coming back as undefined. I
+          looked at the code again and remembered that if I wanted to access the
+          gradebook property that equalled the value of the studentName
+          variable, I needed to use bracket notation and not dot notation. I
+          changed my function to use gradebook[studentName].testScores and then
+          it started working correctly.
+        </p>
+        <p style="margin-bottom: 40px">
+          Solving this problem reinforced my knowledge of bracket notation and
+          dot notation and when to use each.
+        </p>
+        <h2>How I Elegantly Solved a Problem</h2>
+        <p>
+          Another one of our JavaScript Kata challenges was called "Builtin
+          Methods" and involved using built-in JavaScript methods to achieve a
+          result, instead of creating our own methods that do the same thing.
+          One of the problems required us to write a function that will take a
+          sentence as a string, and return a new string that is the same
+          sentence but with every word capitalized.
+        </p>
+        <p>
+          When I first started solving this problem, I wrote out pseudocode to
+          get a general idea of what needed to be done and in what order. My
+          pseudocode went like this:
+        </p>
+
+        <ul>
+          <li>
+            Create another function called capitalizeFirstLetter, to take a
+            string and return that string but capitalized
+          </li>
+          <li>
+            Split the string into an array of words, with ' ' as the separator
+            (.split(' '))
+          </li>
+          <li>
+            Map each word into a new array. Each word is capitalized by
+            supplying the capitalizeFirstLetter function into map()
+          </li>
+          <li>
+            Iterate through the new array and add each word into a new string,
+            adding a space after every word except the last
+          </li>
+          <li>Return that new string</li>
+        </ul>
+        <p>
+          This pseudocode technically works fine, and so did my initial answer:
+        </p>
+        <pre><code>
+  function capitalizeFirstLetter(s) {
+    let firstLetter = s.substr(0, 1)
+    firstLetter = firstLetter.toUpperCase()
+    return firstLetter + s.slice(1, s.length)
+  }
+
+  function capitalize(string) {
+    let wordsInString = string.split(' ')
+    let capitalizedWords = wordsInString.map(capitalizeFirstLetter)
+    let newSentence = ''
+
+    for (let i in capitalizedWords) {
+      newSentence += capitalizedWords[i]
+      if (i &lt; capitalizedWords.length - 1) {
+        newSentence += ' '
+      }
+    }
+
+    return newSentence
+  }
+        </code></pre>
+        <p>
+          However, there are a few improvements I can make to this code to
+          prevent unnecessary functions and make it more concise. Firstly, the
+          final step of adding all the elements of the capitalizedWords array,
+          with spaces after every word except the last, can be completely
+          replaced with the Array.join() function. This takes every element of
+          an array and joins them together into one string, with the supplied
+          argument added in between every word. Here's what my answer looked
+          like next:
+        </p>
+        <pre><code>
+  function capitalizeFirstLetter(s) {
+    let firstLetter = s.substr(0, 1)
+    firstLetter = firstLetter.toUpperCase()
+    return firstLetter + s.slice(1, s.length)
+  }
+
+  function capitalize(string) {
+    let wordsInString = string.split(' ')
+    let capitalizedWords = wordsInString.map(capitalizeFirstLetter)
+    return capitalizedWords.join(' ')
+  }
+        </code></pre>
+        <p>
+          The next improvement I can make is to remove the extra
+          capitalizeFirstLetter() function and include it inside the
+          capitalize() function:
+        </p>
+        <pre><code>
+  function capitalize(string) {
+    let wordsInString = string.split(' ')
+    let capitalizedWords = wordsInString.map((s) => {
+      let firstLetter = s.substr(0, 1)
+      firstLetter = firstLetter.toUpperCase()
+      return firstLetter + s.slice(1, s.length)
+    })
+    return capitalizedWords.join(' ')
+  }
+        </code></pre>
+        <p>
+          Now my answer was down to a single function, but I'm not done yet!
+          Both the capitalize function and the function inside the map method
+          can be
+        </p>
+      </div>
     </main>
     <footer>
       <div class="page-footer">
