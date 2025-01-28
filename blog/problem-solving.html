@@ -60,9 +60,13 @@
           variable that represented the student's name:
         </p>
         <p>I used:</p>
-        <p>gradebook.studentName.testScores</p>
+        <pre><code>
+  gradebook.studentName.testScores
+        </code></pre>
         <p>instead of:</p>
-        <p>gradebook[studentName].testScores</p>
+        <pre><code>
+  gradebook[studentName].testScores
+        </code></pre>
         <p>
           This meant that I was trying to access a record with the student name
           "studentName" instead of a record with the student name that equalled
@@ -76,14 +80,15 @@
           looked at the code again and remembered that if I wanted to access the
           gradebook property that equalled the value of the studentName
           variable, I needed to use bracket notation and not dot notation. I
-          changed my function to use gradebook[studentName].testScores and then
-          it started working correctly.
+          changed my function to use
+          <code style="font-size: 12pt">gradebook[studentName].testScores</code>
+          and then it started working correctly.
         </p>
-        <p style="margin-bottom: 40px">
+        <p>
           Solving this problem reinforced my knowledge of bracket notation and
           dot notation and when to use each.
         </p>
-        <h2>How I Elegantly Solved a Problem</h2>
+        <h2 style="margin-top: 40px">How I Elegantly Solved a Problem</h2>
         <p>
           Another one of our JavaScript Kata challenges was called "Builtin
           Methods" and involved using built-in JavaScript methods to achieve a
@@ -104,8 +109,8 @@
             string and return that string but capitalized
           </li>
           <li>
-            Split the string into an array of words, with ' ' as the separator
-            (.split(' '))
+            Split the string into an array of words, with a space as the
+            separator
           </li>
           <li>
             Map each word into a new array. Each word is capitalized by
@@ -184,8 +189,94 @@
         <p>
           Now my answer was down to a single function, but I'm not done yet!
           Both the capitalize function and the function inside the map method
-          can be
+          can be reduced down to a single line. Instead of declaring a variable,
+          working on that variable, then returning the variable, I can just
+          return the working step. Here it is with the map function reduced to
+          one line:
         </p>
+        <pre><code>
+  function capitalize(string) {
+    let wordsInString = string.split(' ')
+    let capitalizedWords = wordsInString.map((s) => {
+      return s.substr(0, 1).toUpperCase() + s.slice(1, s.length)
+    })
+    return capitalizedWords.join(' ')
+  }
+        </code></pre>
+        <p>
+          And the final step is to also reduce the capitalize function to one
+          line, leaving this elegant (in my eyes) solution:
+        </p>
+        <pre><code>
+  function capitalize(string) {
+    return string.split(' ').map((s) => {
+      return s.substr(0, 1).toUpperCase() + s.slice(1, s.length)
+    }).join(' ')
+  }
+        </code></pre>
+        <p>
+          The problem solving techniques I used were pseudocode and trying
+          something. The initial pseudocode was important for understanding the
+          logic and flow of what needed to happen in my function(s), then I
+          slowly replaced and consolidated sections while trying it out at every
+          step to make sure I was still getting the correct results.
+        </p>
+        <p>
+          This process reinforced my knowledge of the .map() and .join() methods
+          and also helped me further understand using arrow notation (=>) for
+          functions. It opened my eyes to how much a function (or functions) can
+          be consolidated.
+        </p>
+        <h2 style="margin-top: 40px">
+          My Confidence With Using Problem Solving Techniques
+        </h2>
+        <p>
+          I am feeling quite confident with the various problem solving
+          techniques in programming:
+        </p>
+        <ul>
+          <li>
+            Pseudocode: This was useful during the kata challenges, as well as
+            other challenges we have completed. I feel comfortable using it.
+          </li>
+          <li>
+            Trying something: A classic, and something I have been doing since I
+            first started programming.
+          </li>
+          <li>
+            Rubber ducky method: This was a new one to me, and I have used it
+            multiple times during this course (most of the time successfully)
+          </li>
+          <li>
+            Reading error messages: This is a great technique, they are the true
+            truth! I don't always understand the error messages, but that's
+            where the next technique comes in
+          </li>
+          <li>
+            Googling! Another classic, used in all aspects of like, not just
+            programming. Googling is excellent for understanding error messages
+            and learning new methods and the syntax to use them.
+          </li>
+          <li>
+            Console.logging: This is another technique I have been using for a
+            long time. If anything doesn't work the way I expect, I console.log
+            the variable or object I'm working with to make sure it is what I
+            think it is, then work from there. This works great with "typeof ".
+          </li>
+          <li>
+            Asking your peers and coaches for help: This is another new one for
+            me. I have asked a few questions in discord and always get multiple
+            responses and answers, so I'm feeling confident with this one.
+            (Thank you everyone!)
+          </li>
+          <li>
+            Improving your process with reflection: This is probably my least
+            confident technique, although I have seen the benefits of it. I've
+            been reflecting in my Learnal (Learning Journal) with new methods
+            and syntax that I have learned, but I think I could be reflecting
+            more things and more often.
+          </li>
+        </ul>
       </div>
     </main>
     <footer>
